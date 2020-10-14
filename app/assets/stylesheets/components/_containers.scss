@@ -1,3 +1,45 @@
 .sub-title {
   margin: 16px 0 24px 0;
 }
+
+
+.book-container {
+  height: 400px;
+  width: 800px;
+  margin: 52px auto;
+  // background-color: gray;
+  border: 1px solid gray;
+  border-radius: 8px;
+
+}
+
+.book-container img {
+  height: 100%;
+  width: 300px;
+  margin: 16px 0 0 16px;
+}
+
+.book-container h3 {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.book-container h4 {
+  font-size: 20px;
+}
+
+.book-container button {
+  margin: 16px 0 0 16px;
+}
+
+.book-container h5 {
+  font-size: 20px;
+  margin: 16px 0 0 16px;
+}
+
+.review-container {
+  height: 80px;
+  width: 700px;
+  background-color: red;
+  margin: 8px auto;
+}

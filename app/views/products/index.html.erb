@@ -1,4 +1,4 @@
-<h1 class="sub-title">Check our products</h1>
+<h1 class="sub-title">What's your next reading?</h1>
 
 <!-- <button class="btn btn-primary btn-lg no-print" id="printPageButton" onClick="window.print();">Salvar</button> -->
 <div class="cards">
@@ -9,7 +9,7 @@
         <%= link_to product_path(product), style: "texto-decoration: none" do %>
           <h2> <%= product.name %> </h2>
         <% end %>
-        <p>Product description with <strong>relevant info</strong> only.</p>
+        <p> <%= product.description %></p>
       </div>
     </div>
   <% end %>
