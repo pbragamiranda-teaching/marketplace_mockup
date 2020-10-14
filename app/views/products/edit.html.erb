@@ -1,0 +1,44 @@
+<div class="modal fade" id="confirmation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add new Product</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for product,
+             wrapper: :horizontal_form,
+             wrapper_mappings: {
+               boolean:       :horizontal_boolean,
+               check_boxes:   :horizontal_collection,
+               date:          :horizontal_multi_select,
+               datetime:      :horizontal_multi_select,
+               file:          :horizontal_file,
+               radio_buttons: :horizontal_collection,
+               range:         :horizontal_range,
+               time:          :horizontal_multi_select
+             } do  |f| %>
+               <%= f.error_notification %>
+
+               <%= f.input :name %>
+               <%= f.input :category %>
+               <%= f.input :description %>
+               <%= f.input :price %>
+
+               <div class="form-group row mb-0">
+                 <div class="col-sm-9 offset-sm-4  ">
+                   <%= f.button :submit, "Create this product!", :class => "btn btn-primary"%>
+                 </div>
+               </div>
+           <% end %>
+           <h1> <%=  %> </h1>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>

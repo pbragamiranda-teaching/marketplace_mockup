@@ -1,0 +1,16 @@
+<h1 class="sub-title">Check our products</h1>
+
+<!-- <button class="btn btn-primary btn-lg no-print" id="printPageButton" onClick="window.print();">Salvar</button> -->
+<div class="cards">
+  <% @products.each do |product| %>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <%= link_to product_path(product), style: "texto-decoration: none" do %>
+          <h2> <%= product.name %> </h2>
+        <% end %>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
+    </div>
+  <% end %>
+</div>
